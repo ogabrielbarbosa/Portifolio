@@ -1,0 +1,165 @@
+html {
+    scroll-behavior: smooth;
+    margin: 0% 10% 0% 10%;
+  }
+  
+  .containerFirst {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 15%;
+  }
+  
+  .nameText {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+  
+    letter-spacing: 5.6px;
+    text-transform: uppercase;
+    color: #878A8F;
+    margin-bottom: 4%;
+  }
+  
+  .titleText {
+    width: 650px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 75px;
+    /* or 87% */
+  
+    letter-spacing: 0.70px;
+  
+    color: #0F141E;
+    margin-left: -0.6%;
+    margin-bottom: 5%;
+  }
+  
+  .subText {
+    min-width: 675px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 30px;
+    /* or 136% */
+  
+    color: #878A8F;
+    margin-bottom: 2%;
+    text-align: justify;
+  }
+  
+  .containerNavSub {
+    justify-content: space-evenly;
+  }
+  
+  .subTextNav {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 18px;
+    /* or 90% */
+  
+    color: #0F141E;
+  }
+  
+  .subTextNavOr {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+    /* or 90% */
+  
+    color: #878A8F;
+    margin: 0% 2% 0% 2%;
+  }
+  
+  .projectContainer {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15%;
+  }
+  
+  .projectTopText {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 45px;
+    /* identical to box height */
+  
+  
+    color: #000000;
+  }
+  
+  img {
+    display: block;
+    margin: auto;
+    width: 50px;
+  }
+  
+  .containerProject {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .boxProject {
+    width: 600px;
+    height: 400px;
+    border-radius: 3%;
+    background-color: #000000;
+  }
+  
+  .containerTextProject{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-left: 10%;
+  }
+  
+  .textHeaderProject {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 120px;
+  
+    color: #000000;
+  }
+  
+  .textTitleProject {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+  
+    color: #000000;
+  }
+  
+  .containerButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 5% 0% 0% 10%;
+  }
+  
+  .button{
+    width: 45%;
+    height: 50px;
+    background-color: #000000;
+    border-radius: 10px;
+  }

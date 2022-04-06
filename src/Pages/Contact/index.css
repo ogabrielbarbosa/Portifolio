@@ -26,19 +26,19 @@ html {
 }
 
 .titleText {
-  width: 650px;
+  width: 600px;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
-  font-size: 85px;
-  line-height: 75px;
-  /* or 87% */
+  font-size: 45px;
+  line-height: 58px;
+  /* or 129% */
 
-  letter-spacing: 0.70px;
+  letter-spacing: 0.72px;
 
   color: #ececec;
-  margin-left: -0.6%;
-  margin-bottom: 5%;
+  margin-left: -0.1%;
+  margin-bottom: 0%;
 }
 
 .subText {
@@ -152,10 +152,6 @@ img {
   color: #ececec;
 }
 
-ul{
-  margin: 3% 0% 3% 5%;
-}
-
 .textReadMore {
   font-family: 'Poppins';
   font-style: normal;
@@ -228,26 +224,68 @@ ul{
   color: #ececec;
 }
 
-.textCta:hover{
+.textCta:hover {
   text-decoration: underline 5px #ececec;
 }
 
-.containerContact{
+.containerContact {
   display: flex;
   width: 100%;
   margin: 2% 0% 0% 0%;
   justify-content: space-evenly;
 }
 
-button{
+button {
   border: 0;
   background-color: #121212;
 }
 
-svg{
+svg {
   color: #ececec;
 }
 
-svg:hover{
+svg:hover {
   color: #7044a4;
+}
+
+.containerForm{
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-top: 5%;
+}
+
+.formRow{
+  display: flex;
+  flex-direction: row;
+}
+
+.formColumn{
+  display: flex;
+  flex-direction: column;
+}
+
+.firstInput{
+  height: 50px;
+  width: 385px;
+  margin: 5% 0% 5% 0%;
+}
+
+.secondInput{
+  height: 50px;
+  width: 770px;
+  margin: 0% 0% 5% 0%;
+}
+
+.lastInput{
+  height: 300px;
+  width: 770px;
+  margin: 0% 0% 5% 0%;
+}
+
+.submitInput{
+  height: 50px;
+  width: 192px;
+  margin: 0% 0% 5% 0%;
+  background-color: #ececec;
 }

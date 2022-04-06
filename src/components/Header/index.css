@@ -1,0 +1,52 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+.header {
+    box-sizing: border-box;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+}
+
+.menu a {
+    padding: 0.5rem;
+}
+
+.menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+}
+
+svg{
+    color: #ececec;
+}
+
+svg:hover{
+    color: #7044a4;
+}
