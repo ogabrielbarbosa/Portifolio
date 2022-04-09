@@ -17,6 +17,7 @@ a {
 
 .header {
     box-sizing: border-box;
+    margin: 0% 10% 0% 10%;
     height: 100px;
     display: flex;
     align-items: center;
@@ -43,10 +44,25 @@ a {
     margin: 0 1rem;
 }
 
-svg{
+svg {
     color: #ececec;
 }
 
-svg:hover{
+svg:hover {
     color: #7044a4;
+}
+
+.contactButton {
+    width: 100px;
+    background-color: #7044a4;
+    height: 35px;
+    border-radius: 100px;
+    font-family: 'Poppins';
+    color: #ececec;
+}
+
+img {
+    display: block;
+    margin: auto;
+    width: 50px;
 }

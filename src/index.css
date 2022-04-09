@@ -28,6 +28,10 @@ button {
   cursor: pointer;
 }
 
+section{
+  min-height: 100vh;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -46,4 +50,14 @@ button {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #7044a4; 
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #ececec;
+  background: #7044a4;;
+}
+
+::selection {
+  color: #ececec;
+  background: #7044a4;
 }

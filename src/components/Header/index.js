@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.css'
+import '../../styles/header.css';
 import logo from '../../assets/logoBranco.png';
 
 import { GoMarkGithub } from "react-icons/go";
@@ -14,8 +14,9 @@ export default function Header() {
     </a>
     <nav className="nav">
       <ul className="menu" role="menu">
-        <li><Link to="/projects"><GoMarkGithub size={35} /></Link></li>
-        <li><Link to="/about"><BsLinkedin size={35} /></Link></li>
+        <li><Link to="/contact"><button className='contactButton'>Contato</button></Link></li>
+        <li><a href='https://github.com/ogabrielbarbosa'><GoMarkGithub size={35} /></a></li>
+        <li><a href='https://www.linkedin.com/in/gabriel-barbosa-264956236/'><BsLinkedin size={35} /></a></li>
       </ul>
     </nav>
   </header>

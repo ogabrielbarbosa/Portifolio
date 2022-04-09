@@ -1,12 +1,27 @@
-import './index.css';
-import React from 'react';
-
+import React, {useRef} from 'react';
+import '../../styles/contact.css';
+import emailjs from '@emailjs/browser';
 import Header from '../../components/Header';
-import ProjectModel1 from '../../components/ProjectModel1';
 import { Link } from 'react-router-dom';
 import { FaAngleDown, FaAngleRight } from "react-icons/fa";
 
 export default function Contact() {
+
+  const form = useRef();
+
+  function sendEmail(e){
+    e.preventDefault();
+
+    emailjs.sendForm('service_4bsjsel', 'template_d2927us', e.target, 'HF__0fSoji5BA7xUc')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+
+    e.target.reset();
+  };
+
   return (
     <div>
       <Header />
@@ -15,35 +30,25 @@ export default function Contact() {
         <span className='nameText'>Contato</span>
         <span className='titleText'>Entre em contato — vamos trabalhar juntos.</span>
         <span className='subText'>
-          Estou interessado em oportunidades freelance – especialmente projetos 
-          ambiciosos ou grandes. No entanto, se você tiver outra solicitação ou 
+          Estou interessado em oportunidades freelance – especialmente projetos
+          ambiciosos ou grandes. No entanto, se você tiver outra solicitação ou
           pergunta, não hesite em usar o formulário.
         </span>
-      </div>   
+      </div>
 
-      <form className='containerForm'>
+      <form className='containerForm' onSubmit={sendEmail}>
         <ul>
           <div className='formRow'>
-            <div>
-              <input className='firstInput'></input>
-            </div>
-            <div>
-              <input className='firstInput'></input>
-            </div>
+            <input data-aos="zoom-in" placeholder="Nome" name="nome" className='firstInput'></input>
+
+            <input data-aos="zoom-in" placeholder="Email" name="from_email" className='firstInput'></input>
+
+            <input data-aos="zoom-in" placeholder="Assunto" name="assunto" className='secondInput'></input>
+
+            <textarea data-aos="zoom-in" placeholder="Mensagem" name="mensagem" className='lastInput'></textarea>
           </div>
 
-          <div className='formColumn'>
-            <div>
-              <input className='secondInput'></input>
-            </div>
-            <div>
-              <input className='lastInput'></input>
-            </div>
-          </div>
-
-          <button className='submitInput'>
-
-          </button>
+          <button data-aos="zoom-in" data-aos-offset="50" className='submitInput'>Enviar mensagem!</button>
         </ul>
       </form>
     </div>
