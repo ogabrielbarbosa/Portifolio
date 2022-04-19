@@ -61,8 +61,44 @@ svg:hover {
     color: #ececec;
 }
 
+.contactText{
+    font-family: 'Poppins';
+    color: #ececec;
+    font-size: 15px;
+}
+
 img {
     display: block;
     margin: auto;
     width: 50px;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+.mobile-menu div{
+    width: 32px;
+    height: 2px;
+    background-color: #ececec;
+    margin: 8px;
+}
+
+@media screen and (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
+    .menu a {
+        padding: 1rem 0;
+        margin: 0 0rem;
+    }
+    .nav{
+        position: absolute;
+    }
+    .nav li{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
 }

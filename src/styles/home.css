@@ -3,14 +3,33 @@ html {
   background-color: #121212;
 }
 
-.containerFirstHome {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 10% 10% 0% 10%;
+.container {
+  min-height: calc(var(--vh, 1vh)*100);
 }
 
-.nameTextHome {
+.container-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.containerFirst {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.projectContainer {
+  display: flex;
+  width: 100%;
+  min-height: 10vh;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.nameText {
+  margin: 0% 10% 0% 10%;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -21,11 +40,11 @@ html {
   letter-spacing: 5.6px;
   text-transform: uppercase;
   color: #878A8F;
-  margin-bottom: 4%;
 }
 
-.titleTextsHome {
-  width: 650px;
+.titleText {
+  margin: 0% 0% 1% 10%;
+  max-width: 85vh;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
@@ -36,12 +55,12 @@ html {
   letter-spacing: 0.70px;
 
   color: #ececec;
-  margin-left: -0.5%;
-  margin-bottom: 1%;
+
 }
 
-.subTextHome {
-  min-width: 675px;
+.subText {
+  margin: 0% 10% 0% 10%;
+  max-width: 100vh;
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -54,11 +73,12 @@ html {
   text-align: justify;
 }
 
-.containerNavSubHome {
+.containerNavSub {
   justify-content: space-evenly;
+  margin: 0% 10% 0% 10%;
 }
 
-.subTextNavHome {
+.subTextNav {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
@@ -69,11 +89,11 @@ html {
   color: #ececec;
 }
 
-.subTextNavHome:hover {
+.subTextNav:hover {
   color: #7044a4;
 }
 
-.subTextNavOrHome {
+.subTextNavOr {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
@@ -82,19 +102,10 @@ html {
   /* or 90% */
 
   color: #878A8F;
-  margin: 0% 2% 0% 2%;
+  margin: 0% 1% 0% 1%;
 }
 
-.projectContainerHome {
-  display: flex;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  margin-top: 10%;
-  flex-direction: column;
-}
-
-.projectTopTextHome {
+.projectTopText {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
@@ -106,25 +117,17 @@ html {
   color: #ececec;
 }
 
-
-
-
-
-
-
-
-
-
-
 .containerProject {
   display: flex;
   justify-content: center;
+  gap: 30px;
   align-items: center;
   flex-direction: row;
+  margin: 0% 10% 0% 10%;
 }
 
 .boxProject1 {
-  width: 30%;
+  width: 35em;
   border-radius: 20px;
   box-shadow: 0px 0px 50px 5px #00488b;
 }
@@ -137,16 +140,13 @@ html {
 
 
 .boxProject2 {
-  width: 600px;
-  height: 400px;
+  width: 35em;
   border-radius: 20px;
-  background: url('../assets/tcc2.png');
   box-shadow: 0px 0px 50px 5px #00488b;
 }
 
 .boxProject3 {
-  width: 600px;
-  height: 400px;
+  width: 35em;
   border-radius: 20px;
   box-shadow: 0px 0px 50px 5px #7144a457;
 }
@@ -154,15 +154,13 @@ html {
 .containerTextProject {
   display: flex;
   flex-direction: column;
-  margin-left: 10%;
-  width: 400px;
 }
 
 .textHeaderProject {
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-size: 2vw;
+  font-size: 45px;
   line-height: 70px;
 
   color: #ececec;
@@ -208,7 +206,6 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-left: 10%;
 }
 
 .button {
@@ -235,6 +232,7 @@ li {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
+  margin: 0% 10% 0% 10%;
 }
 
 .textHeaderCta {
@@ -270,7 +268,7 @@ li {
 
 .containerContact {
   display: flex;
-  width: 35%;
+  width: 45em;
   margin: 2% 0% 0% 0%;
   justify-content: space-evenly;
 }
@@ -288,400 +286,180 @@ svg:hover {
   color: #7044a4;
 }
 
-@media screen and (max-width: 480px) {
-
-  .containerFirstHome {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 50% 10% 0% 10%;
-  }
-
-  .containerTextProject {
-    width: 300px;
-    margin-left: 0%;
-  }
-
-  .projectContainerHome {
-    margin-top: 50%;
-  }
-
-  .boxProject1 {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    background: url('../assets/tcc1.png');
-    box-shadow: 0px 0px 50px 5px #00488b;
-  }
-
-  .boxProject2 {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    background: url('../assets/tcc2.png');
-    box-shadow: 0px 0px 50px 5px #00488b;
-  }
-
-  .boxProject3 {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 50px 5px #7144a457;
-  }
-
-  .nameTextHome {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 20px;
-    /* or 143% */
-
-    letter-spacing: 5.6px;
-    text-transform: uppercase;
-    color: #878A8F;
-    margin-bottom: 4%;
-  }
-
-  .titleTextsHome {
-    width: 250px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
-    /* or 87% */
-
-    letter-spacing: 0.70px;
-
-    color: #ececec;
-    margin-left: -0.5%;
-    margin-bottom: 1%;
-  }
-
-  .subTextHome {
-    min-width: 300px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    /* or 136% */
-
-    color: #878A8F;
-    margin-bottom: 2%;
-    text-align: justify;
-  }
-
-  .subTextNavHome {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 13px;
-    line-height: 18px;
-    /* or 90% */
-
-    color: #ececec;
-  }
-
-  .subTextNavHome:hover {
-    color: #7044a4;
-  }
-
-  .subTextNavOrHome {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 18px;
-    /* or 90% */
-
-    color: #878A8F;
-    margin: 0% 2% 0% 2%;
-  }
-
-  .textHeaderProject {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 70px;
-    text-align: center;
-    color: #ececec;
-  }
-
-  .textTitleProject {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-
-    color: #ececec;
-  }
-
-  .textTools {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-
-    color: #ececec;
-  }
-
-  .tools {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3%;
-    margin: 0% 0% 5% 0%;
-  }
-
-  .containerButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0% 10% 0% 10%;
-  }
-
-  .textCta {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 75px;
-    /* or 94% */
-
-    letter-spacing: 0.12px;
-    color: #ececec;
-  }
-
-  .textHeaderCta {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 20px;
-    /* or 143% */
-
-    letter-spacing: 5.6px;
-    text-transform: uppercase;
-
-    color: #878A8F;
-
-  }
-
-  .containerProject {
-    flex-direction: column;
-  }
-
-  .containerNavSubHome {
-    min-width: 240pxnom
-  }
-}
-
-@media screen and (max-width: 768px) {
-
-  .containerFirstHome {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    margin: 30% 10% 0% 10%;
-  }
-
-  .containerTextProject {
-    width: 300px;
-    margin-left: 0%;
-  }
-
-  .projectContainerHome {
-    margin-top: 50%;
-  }
-
-  .boxProject1 {
-    width: 600px;
-    height: 400px;
-    border-radius: 20px;
-    background: url('../assets/tcc1.png');
-    box-shadow: 0px 0px 50px 5px #00488b;
-  }
-
-  .boxProject2 {
-    width: 600px;
-    height: 400px;
-    border-radius: 20px;
-    background: url('../assets/tcc2.png');
-    box-shadow: 0px 0px 50px 5px #00488b;
-  }
-
-  .boxProject3 {
-    width: 600px;
-    height: 400px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 50px 5px #7144a457;
-  }
-
-  .nameTextHome {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    /* or 143% */
-
-    letter-spacing: 5.6px;
-    text-transform: uppercase;
-    color: #878A8F;
-    margin-bottom: 4%;
-  }
-
-  .titleTextsHome {
-    width: 350px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 45px;
-    /* or 87% */
-
-    letter-spacing: 0.70px;
-
-    color: #ececec;
-    margin-left: -0.5%;
-    margin-bottom: 1%;
-  }
-
-  .subTextHome {
-    min-width: 300px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    /* or 136% */
-
-    color: #878A8F;
-    margin-bottom: 2%;
-    text-align: justify;
-  }
-
-  .subTextNavHome {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 18px;
-    /* or 90% */
-
-    color: #ececec;
-  }
-
-  .subTextNavHome:hover {
-    color: #7044a4;
-  }
-
-  .subTextNavOrHome {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 18px;
-    /* or 90% */
-
-    color: #878A8F;
-    margin: 0% 2% 0% 2%;
-  }
-
-  .textHeaderProject {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 70px;
-    text-align: center;
-    color: #ececec;
-  }
-
-  .textTitleProject {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-
-    color: #ececec;
-  }
-
-  .textTools {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    text-align: center;
-
-    color: #ececec;
-  }
-
-  .tools {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3%;
-    margin: 0% 0% 5% 0%;
-  }
-
-  .containerButtons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0% 10% 0% 10%;
-  }
-
-  .textCta {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 25px;
-    line-height: 75px;
-    /* or 94% */
-
-    letter-spacing: 0.12px;
-    color: #ececec;
-  }
-
-  .textHeaderCta {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 20px;
-    /* or 143% */
-
-    letter-spacing: 5.6px;
-    text-transform: uppercase;
-
-    color: #878A8F;
-
-  }
-
-  .containerProject {
-    flex-direction: column;
-  }
-
-  .containerNavSubHome {
-    min-width: 240pxnom
-  }
-}
-
-
 .containerInformations {
+  width: 30em;
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (max-width: 1104px) {
+  .containerProject {
+    flex-direction: column;
+  }
+
+  .containerInformations {
+    width: 35em;
+  }
+
+  .textCta {
+    font-weight: 800;
+    font-size: 5.7vw;
+    letter-spacing: 0.12px;
+    color: #ececec;
+    line-height: 15px;
+  }
+
+  .textHeaderCta {
+    font-size: 1.2vw;
+    letter-spacing: 0.5vw;
+  }
+  
+  .containerContact {
+    width: 55vw;
+  }
+
+  .boxProject1 {
+    width: 35em;
+    margin: 0% 10% 0% 10%;
+  }
+
+  .boxProject2 {
+    width: 35em;
+    margin: 0% 10% 0% 10%;
+  }
+
+  .boxProject3 {
+    width: 35em;
+    margin: 0% 10% 0% 10%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .nameText {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* or 143% */
+
+    letter-spacing: 5.6px;
+    text-transform: uppercase;
+    color: #878A8F;
+  }
+
+  .titleText {
+    margin: 0% 0% 1% 10%;
+    font-size: 10vw;
+    line-height: 10vw;
+    /* or 87% */
+
+    letter-spacing: 0.70px;
+
+    color: #ececec;
+
+  }
+
+  .subText {
+    margin: 0% 10% 0% 10%;
+    max-width: 60vh;
+    font-size: 20px;
+    line-height: 25px;
+    /* or 136% */
+
+    color: #878A8F;
+    margin-bottom: 2%;
+    text-align: justify;
+  }
+
+  .subTextNav {
+    font-size: 20px;
+    line-height: 18px;
+    /* or 90% */
+
+    color: #ececec;
+  }
+
+  .subTextNavOr {
+    font-size: 20px;
+    line-height: 18px;
+    /* or 90% */
+
+    color: #878A8F;
+    margin: 0% 2% 0% 2%;
+  }
+
+  .textHeaderCta {
+    font-size: 1.5vw;
+    letter-spacing: 0.5vw;
+  }
+
+  .containerContact {
+    width: 60vw;
+  }
+
+  .textCta:hover {
+    text-decoration: underline 4px #ececec;
+  }
+}
+
+@media screen and (max-width: 636px) {
+  .titleText {
+    max-width: 60vh;
+    font-size: 9vw;
+    line-height: 10vw;
+    letter-spacing: 0.70px;
+  }
+
+  .boxProject1 {
+    width: 80vw;
+  }
+
+  .boxProject2 {
+    width: 80vw;
+  }
+
+  .boxProject3 {
+    width: 80vw;
+  }
+
+  .containerInformations {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .textHeaderProject {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  .textTitleProject {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+  }
+
+  .textHeaderCta {
+    font-size: 2vw;
+    line-height: 20px;
+
+    letter-spacing: 3px;
+  }
+
+  .textCta {
+    font-weight: 800;
+    font-size: 5.7vw;
+    letter-spacing: 0.12px;
+    color: #ececec;
+    line-height: 15px;
+  }
+
+  .containerContact {
+    width: 80vw;
+  }
+
+  .textCta:hover {
+    text-decoration: underline 3px #ececec;
+  }
 }

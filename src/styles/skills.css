@@ -1,202 +1,41 @@
-html {
-  scroll-behavior: smooth;
-  background-color: #121212;
-}
-
-.containerFirstSkills {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin: 13% 10% 0% 10%;
-}
-
-.nameText {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  /* or 143% */
-
-  letter-spacing: 5.6px;
-  text-transform: uppercase;
-  color: #878A8F;
-  margin-bottom: 4%;
-}
-
-.titleTextSkills {
-  width: 650px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 85px;
-  line-height: 75px;
-  /* or 87% */
-
-  letter-spacing: 0.70px;
-
-  color: #ececec;
-  margin-left: -0.5%;
-  margin-bottom: 1%;
-}
-
-.subTextSkills {
-  min-width: 675px;
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 30px;
-  /* or 136% */
-
-  color: #878A8F;
-  margin-bottom: 2%;
-  text-align: justify;
-}
 
 .containerSkills{
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   margin: 0% 10% 0% 10%;
 }
 
 .boxSkill{
-  width: 450px;
-  height: 300px;
-  background-color: aliceblue;
-  margin-bottom: 5%;
+  display: flex;
+  width: 20vw;
+  flex-direction: column;
+  height: 35vh;
+  background-color: #121212;
+  justify-content: center;
+  padding: 3%;
 }
 
-@media screen and (max-width: 480px) {
+.textSkill{
+  font-size: 20px;
+  text-align: center;
+  margin-top: 5%;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  color: #ececec;
+}
 
-  .containerFirstSkills {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 50% 10% 0% 10%;
-  }
-
-  .containerTextProject {
-    width: 300px;
-    margin-left: 0%;
-  }
-
-  .projectContainerHome {
-    margin-top: 50%;
-  }
-
-  .boxProject1 {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    background: url('../assets/tcc1.png');
-    box-shadow: 0px 0px 50px 5px #00488b;
-  }
-
-  .boxProject2 {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    background: url('../assets/tcc2.png');
-    box-shadow: 0px 0px 50px 5px #00488b;
-  }
-
-  .boxProject3 {
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
-    box-shadow: 0px 0px 50px 5px #7144a457;
-  }
-
-  .nameText {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 20px;
-    /* or 143% */
-  
-    letter-spacing: 5.6px;
-    text-transform: uppercase;
-    color: #878A8F;
-    margin-bottom: 4%;
-  }
-  
-  .titleTextSkills {
-    width: 300px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
-    /* or 87% */
-  
-    letter-spacing: 0.70px;
-  
-    color: #ececec;
-    margin-left: -0.5%;
-    margin-bottom: 1%;
-  }
-  
-  .subTextSkills {
-    min-width: 300px;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-    /* or 136% */
-  
-    color: #878A8F;
-    margin-bottom: 2%;
-    text-align: justify;
-  }
-
-  .containerForm{
-    display: flex;
-    flex-direction: column;
-    margin: 5% 10% 0% 10%;
-  }
-
-  .formRow{
-    display: flex;
-    flex-direction: row;
-  }
-
-  .formRow{
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .formRow>.firstInput{
-    flex: 1 1 1000px;
-  }
-  
-  .firstInput{
-    height: 50px;
-    font-size: 20px;
-    padding: 3%;
-  }
-  
-  .firstInput:first-child{
-    margin-right: 0%;
-    margin-bottom: 3%;
-  }
-
-  .submitInput{
-    height: 50px;
-    width: 100%;
-    margin: 0% 0% 10% 0%;
-    font-family: 'Poppins';
-    font-size: 15px;
-    border: 2px solid #7044a4;
-    color: #7044a4;
-    background-color: #121212;
-  }
-
+@media screen and (max-width: 840px) {
   .containerSkills{
     margin: 10%;
+  }
+  .containerSkills>.boxSkill{
+    flex: 1 1 250px;
+  }
+  .boxSkill{
+    width: 10px;
+    height: 25vh;
   }
 }
