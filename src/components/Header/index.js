@@ -19,7 +19,7 @@ export default function Header() {
         <ul className="menu" role="menu">
           <li><Link to="/contact"><button className='contactButton'>Contato</button></Link></li>
           <li><a href='https://github.com/ogabrielbarbosa'><GoMarkGithub size={35} /></a></li>
-          <li><a href='https://www.linkedin.com/in/gabriel-barbosa-264956236/'><BsLinkedin size={35} /></a></li>
+          <li><a href='https://www.linkedin.com/in/ogabriel-barbosa22/'><BsLinkedin size={35} /></a></li>
         </ul>
       </nav>
     </header>

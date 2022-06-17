@@ -18,7 +18,7 @@ export default function Skills() {
     <div className='container'>
       <Header />
       <div className='container-main'>
-        <div data-aos="zoom-out"
+        <div data-aos="zoom-in"
           className='containerFirst'>
           <span className='nameText'>Minhas</span>
           <span className='titleText'>Habilidades & Skills</span>
@@ -36,7 +36,7 @@ export default function Skills() {
       </div>
 
       <section id="skills" className='containerSkills'>
-        <div className='boxSkill'>
+        <div className='boxSkill' data-aos="zoom-in">
           <CircularProgressbar
             value={80}
             text={`${80}%`}
@@ -51,7 +51,7 @@ export default function Skills() {
           />
           <span className='textSkill'>ReactJS</span>
         </div>
-        <div className='boxSkill'>
+        <div className='boxSkill' data-aos="zoom-in">
           <CircularProgressbar
             value={80}
             text={`${80}%`}
@@ -66,7 +66,7 @@ export default function Skills() {
           />
           <span className='textSkill'>React-Native</span>
         </div>
-        <div className='boxSkill'>
+        <div className='boxSkill' data-aos="zoom-in">
           <CircularProgressbar
             value={30}
             text={`${30}%`}
@@ -81,7 +81,7 @@ export default function Skills() {
           />
           <span className='textSkill'>NodeJS</span>
         </div>
-        <div className='boxSkill'>
+        <div className='boxSkill' data-aos="zoom-in">
           <CircularProgressbar
             value={10}
             text={`${10}%`}
@@ -96,7 +96,7 @@ export default function Skills() {
           />
           <span className='textSkill'>C#</span>
         </div>
-        <div className='boxSkill'>
+        <div className='boxSkill' data-aos="zoom-in">
           <CircularProgressbar
             value={20}
             text={`${20}%`}
@@ -111,7 +111,7 @@ export default function Skills() {
           />
           <span className='textSkill'>C++</span>
         </div>
-        <div className='boxSkill'>
+        <div className='boxSkill' data-aos="zoom-in">
           <CircularProgressbar
             value={40}
             text={`${40}%`}

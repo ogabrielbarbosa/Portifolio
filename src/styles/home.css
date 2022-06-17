@@ -126,29 +126,28 @@ html {
   margin: 0% 10% 0% 10%;
 }
 
-.boxProject1 {
-  width: 35em;
-  border-radius: 20px;
-  box-shadow: 0px 0px 50px 5px #00488b;
-}
-
 .foto {
   min-width: 100%;
   min-height: 100%;
   border-radius: 20px;
 }
 
+.boxProject1 {
+  width: 45em;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px 5px #00488b;
+}
 
 .boxProject2 {
-  width: 35em;
+  width: 45em;
   border-radius: 20px;
   box-shadow: 0px 0px 50px 5px #00488b;
 }
 
 .boxProject3 {
-  width: 35em;
+  width: 45em;
   border-radius: 20px;
-  box-shadow: 0px 0px 50px 5px #7144a457;
+  box-shadow: 0px 0px 50px 1px #ececec;
 }
 
 .containerTextProject {
@@ -313,7 +312,7 @@ svg:hover {
     font-size: 1.2vw;
     letter-spacing: 0.5vw;
   }
-  
+
   .containerContact {
     width: 55vw;
   }

@@ -10,6 +10,7 @@ import { AiOutlineTwitter } from "react-icons/ai";
 
 import tcc1Logo from '../../assets/orientador.png';
 import tcc2Logo from '../../assets/professor.png';
+import listaLogo from '../../assets/lista.png';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -21,13 +22,11 @@ export default function Home() {
 
   return (
     <div>
-
-
-      {/*--------------------------------------------------------------------*/}
       <div className='container'>
         <Header />
         <div className='container-main'>
-          <div className='containerFirst'>
+          <div data-aos="zoom-in"
+            className='containerFirst'>
             <span className='nameText'>Gabriel Barbosa</span>
             <span className='titleText'>Desenvolvedor mobile e web</span>
             <span className='subText'>
@@ -49,7 +48,6 @@ export default function Home() {
             <a className='projectTopText' href='#projects'><FaAngleDown color='#7044a4' /></a>
           </div>
         </div>
-
       </div>
 
       {/*--------------------------------------------------------------------*/}
@@ -118,7 +116,7 @@ export default function Home() {
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
           className='boxProject3'>
-
+          <img src={listaLogo} className="foto"></img>
         </div>
         <div data-aos="zoom-in"
           data-aos-offset="300"
@@ -151,7 +149,7 @@ export default function Home() {
         <Link to="/contact"><a className='textCta'>Vamos trabalhar juntos<FaAngleRight /></a></Link>
         <div className='containerContact'>
           <button><a href='https://github.com/ogabrielbarbosa'><GoMarkGithub size={35} /></a></button>
-          <button><a href='https://www.linkedin.com/in/gabriel-barbosa-264956236/'><BsLinkedin size={35} /></a></button>
+          <button><a href='https://www.linkedin.com/in/ogabriel-barbosa22/'><BsLinkedin size={35} /></a></button>
           <button><a href='https://twitter.com/barbozs_a'><AiOutlineTwitter size={35} /></a></button>
         </div>
       </section>
