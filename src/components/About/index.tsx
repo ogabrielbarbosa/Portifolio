@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
-
+import { Link } from 'react-router-dom';
 import { ContainerAbout, Image, SubContainerAbout, Divider, SubTitle, SubTitleColor, Description, ContainerButtons, ContactButton, AboutButton, TextButton, TextButtonAbout } from './styles';
 
 import photo from '../../assets/photo.png';
@@ -36,11 +36,13 @@ const About: React.FC<Props> = ({ toggleTheme }) => {
                             Contato
                         </TextButton>
                     </ContactButton>
-                    <AboutButton href="#contato">
-                        <TextButtonAbout>
-                            Saber Mais
-                        </TextButtonAbout>
-                    </AboutButton>
+                    <Link to='sobre'>
+                        <AboutButton>
+                            <TextButtonAbout>
+                                Saber Mais
+                            </TextButtonAbout>
+                        </AboutButton>
+                    </Link>
                 </ContainerButtons>
             </SubContainerAbout>
         </ContainerAbout>

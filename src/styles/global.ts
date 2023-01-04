@@ -50,4 +50,43 @@ export default createGlobalStyle`
             display: none;
         }
     }
+
+    .header{
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        height: 15vh;
+        justify-content: space-between;
+        margin: 0 10%;
+        background: ${props => props.theme.colors.background};
+        @media screen and (max-width: 768px){        
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .hide{
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        height: 100vh;
+        justify-content: space-between;
+        margin: 0 10%;
+        background: ${props => props.theme.colors.background};
+    }
+
+    .navigator-close{
+        @media screen and (max-width: 768px){    
+            display: flex;
+        }
+    }
+
+    .navigator-open{
+        @media screen and (max-width: 768px){    
+            display: none;
+        }
+    }
+
+    .switchCenter{
+        display: flex;
+    }
 `;

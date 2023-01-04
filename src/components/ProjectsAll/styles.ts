@@ -11,8 +11,8 @@ export const ContainerHorizontal = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-
+    flex-direction: column;
+    gap: 40px;
     @media screen and (max-width: 1255px){    
         flex-direction: column;
     }
@@ -22,12 +22,11 @@ export const SubContainerProjects = styled.div`
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 30%;
-    height: 200px;
+    width: 100%;
+    height: 100px;
 
     @media screen and (max-width: 1255px){    
         width: 100%;
-        height: 150px;
     }
 `;
 
@@ -44,7 +43,7 @@ export const Divider = styled.div`
 
 export const SubTitle = styled.span`
     font-family: 'Inter', sans-serif;
-    width: 50%;
+    width: 15%;
     font-style: normal;
     font-weight: 700;
     color: ${props => props.theme.colors.text};
@@ -52,6 +51,26 @@ export const SubTitle = styled.span`
     
     @media screen and (max-width: 480px){    
         width: 60%;
+    }
+
+    @media screen and (max-width: 1472px){    
+        width: 20%;
+    }
+
+    @media screen and (max-width: 1108px){    
+        width: 30%;
+    }
+
+    @media screen and (max-width: 750px){    
+        width: 49%;
+    }
+
+    @media screen and (max-width: 480px){    
+        width: 49%;
+    }
+
+    @media screen and (max-width: 480px){
+        width: 78%;
     }
 `;
 
@@ -87,17 +106,21 @@ export const ButtonGit = styled.a`
     width: fit-content;
 `;
 
-export const Carousel = styled.div`
-    display: flex;
-    width: 900px;
+export const Projects = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
-    padding: 1%;
     gap: 20px;
     flex-wrap: nowrap;
 
-    @media screen and (max-width: 480px){    
-        width: 100%;
+    @media screen and (max-width: 1472px){    
+        grid-template-columns: repeat(2,1fr);
     }
+
+    @media screen and (max-width: 945px){    
+        grid-template-columns: repeat(1,1fr);
+    }
+
 `;
 
 export const Project = styled.div`

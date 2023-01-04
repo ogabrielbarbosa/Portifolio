@@ -8,7 +8,6 @@ export const ContainerHeader = styled.div`
     justify-content: space-between;
     margin: 0 10%;
     background: ${props => props.theme.colors.background};
-
 `;
 
 export const Menu = styled.ul`
@@ -16,6 +15,10 @@ export const Menu = styled.ul`
     align-items: center;
     gap: 1.5rem;
     list-style: none;
+
+    @media screen and (max-width: 768px){    
+        flex-direction: column;
+    }
 `;
 
 export const Navs = styled.nav`

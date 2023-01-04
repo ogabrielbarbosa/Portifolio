@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
-
-import ProjectsData from '../../projects.json';
+import { Link } from 'react-router-dom';
+import ProjectsData from '../../projectsdata';
 
 import {
     ContainerProjects,
@@ -16,6 +16,7 @@ import {
     ButtonGit,
     Carousel,
     Project,
+    BoxImage,
     Image,
     ContainerTitle,
     TitleProject,
@@ -82,7 +83,9 @@ const Projects: React.FC<Props> = ({ toggleTheme }) => {
                             return (
                                 <SwiperSlide key={id}>
                                     <Project>
-                                        <Image />
+                                        <BoxImage>
+                                            <Image src={img} />
+                                        </BoxImage>
 
                                         <ContainerTitle>
                                             <TitleProject>{title}</TitleProject>
@@ -116,7 +119,9 @@ const Projects: React.FC<Props> = ({ toggleTheme }) => {
                             return (
                                 <SwiperSlide key={id}>
                                     <Project>
-                                        <Image />
+                                        <BoxImage>
+                                            <Image src={img} />
+                                        </BoxImage>
 
                                         <ContainerTitle>
                                             <TitleProject>{title}</TitleProject>
@@ -134,11 +139,14 @@ const Projects: React.FC<Props> = ({ toggleTheme }) => {
             </ContainerHorizontal>
 
             <ContainerHorizontal>
-                <AllProjects>
-                    <TextButton>
-                        Ver todos os projetos
-                    </TextButton>
-                </AllProjects>
+                <Link to='/projetos'>
+                    <AllProjects>
+                        <TextButton>
+                            Ver todos os projetos
+                        </TextButton>
+                    </AllProjects>
+                </Link>
+
             </ContainerHorizontal>
 
         </ContainerProjects>
