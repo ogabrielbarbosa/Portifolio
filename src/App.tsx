@@ -2,14 +2,16 @@ import React from 'react';
 import { ThemeProvider, DefaultTheme } from 'styled-components';
 import usePersistedState from './utils/usePersistedState';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
 import light from './styles/themes/light';
 import dark from './styles/themes/dark';
 
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import About from './pages/About';
+import GlobalStyle from './styles/global';
+import Presentation from './components/Presentation';
+import About from './components/About';
+import Technologies from './components/Technologies';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 function App() {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
@@ -19,16 +21,17 @@ function App() {
   }
 
   return (
-    <BrowserRouter>
-      <ThemeProvider theme={theme}>
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/projetos' element={<Projects toggleTheme={toggleTheme}/>}></Route>
-          <Route path='/sobre' element={<About toggleTheme={toggleTheme}/>}></Route>
-        </Routes>
-      </ThemeProvider>
-    </BrowserRouter>
-
+    <ThemeProvider theme={theme}>
+      <Presentation toggleTheme={toggleTheme} />
+      <div className='App'>
+        <GlobalStyle />
+        <About toggleTheme={toggleTheme} />
+        <Technologies toggleTheme={toggleTheme} />
+        <Projects toggleTheme={toggleTheme} />
+        <Contact toggleTheme={toggleTheme} />
+      </div>
+      <Footer toggleTheme={toggleTheme} />
+    </ThemeProvider>
   );
 }
 

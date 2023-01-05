@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
 import { Link } from 'react-router-dom';
-import { ContainerAbout, Image, SubContainerAbout, Divider, SubTitle, SubTitleColor, Description, ContainerButtons, ContactButton, AboutButton, TextButton, TextButtonAbout } from './styles';
+import { ContainerAbout, Image, SubContainerAbout, SubTitle, Description, ContainerButtons, ContactButton, TextButton } from './styles';
 
 import photo from '../../assets/photo.png';
 
@@ -19,15 +19,12 @@ const About: React.FC<Props> = ({ toggleTheme }) => {
             <Image src={photo} alt="Gabriel Barbosa" />
 
             <SubContainerAbout>
-                <Divider />
                 <SubTitle>
-                    Um pouco sobre
-                    <SubTitleColor> mim</SubTitleColor>
+                    Sobre mim
                 </SubTitle>
 
                 <Description>
-                    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
+                    Lorem ipsum dolor sit amet. Aut quasi numquam cum libero voluptates et accusantium totam id magnam voluptas. Et corrupti commodi non nihil enim est quidem culpa non quia animi non voluptate quaerat! Et blanditiis velit ut sunt tenetur id molestiae perspiciatis? Rem neque sapiente ad voluptatem fuga et dolor libero non quam placeat. Nam iste aperiam sit beatae enim qui magni libero qui recusandae voluptas cum omnis optio.
                 </Description>
 
                 <ContainerButtons>
@@ -36,13 +33,6 @@ const About: React.FC<Props> = ({ toggleTheme }) => {
                             Contato
                         </TextButton>
                     </ContactButton>
-                    <Link to='sobre'>
-                        <AboutButton>
-                            <TextButtonAbout>
-                                Saber Mais
-                            </TextButtonAbout>
-                        </AboutButton>
-                    </Link>
                 </ContainerButtons>
             </SubContainerAbout>
         </ContainerAbout>

@@ -3,76 +3,56 @@ import "@fontsource/space-grotesk";
 
 export const ContainerContact = styled.div`
     display: flex;
-    align-items: center;
     flex-direction: column;
-    margin: 0 10% 20% 10%;
-    height: 30vh;
-    justify-content: space-between;
-
-    @media screen and (max-width: 480px){    
-        height: 60vh;
-    }
+    gap: 30px;
+    padding: 150px 0px;
 `;
 
 export const SubContainerTexts = styled.div`
     display: flex;
-    align-items: center;
     flex-direction: column;
 `;
 
 export const TextTitle = styled.span`
-    font-family: 'Inter';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     color: ${props => props.theme.colors.text};
-    font-size: 50px;
+    font-size: 40px;
 
-    @media screen and (max-width: 480px){    
-        font-size: 25px;
+    @media screen and (max-width: 468px){    
+        font-size: 35px;
     }
-
 `;
 
 export const SubTextTitle = styled.span`
-    font-family: 'Inter';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
-    color: ${props => props.theme.colors.text};
+    color: ${props => props.theme.colors.secundary};
     font-size: 20px;
-    width: 45%;
-    text-align: center;
-    margin-top: 10px;
-
-    @media screen and (max-width: 480px){    
-        font-size: 15px;
-        width: 90%;
-    }
 `;
 
 export const SubContainerContact = styled.div`
     display: flex;
-    flex-direction: row;
-    gap: 10px;
-
-    @media screen and (max-width: 480px){    
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
+    flex-direction: column;
+    gap: 20px;
 `;
 
 export const BoxContact = styled.a`
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid #37D892;
-    border-radius: 100px;
+    border-radius: 5px;
     padding: 15px 10px 15px 10px;
-    width: 150px;
+    width: 200px;
     justify-content: space-around;
+    border: 1px solid ${props => props.theme.colors.background};;
+    transition: all 0.3s ease-in-out;
 
-    @media screen and (max-width: 480px){    
-        width: 80%;
+    &:hover, :focus{
+        background-color: #37D89220;
+        border: 1px solid #37D892;
     }
 `;
 
@@ -86,7 +66,7 @@ export const BoxTexts = styled.a`
 `;
 
 export const TitleContact = styled.a`
-    font-family: 'Inter';
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -99,38 +79,38 @@ export const TitleContact = styled.a`
 `;
 
 export const LinkText = styled.a`
-    font-family: 'Inter';
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
     color: ${props => props.theme.colors.text};
-    width: 70px;
+    width: 100px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-
-    @media screen and (max-width: 480px){    
-        width: 150px;
-    }
 `;
 
 export const BoxCV = styled.a`
     display: flex;
     flex-direction: row;
     border: 1px solid #37D892;
+    align-items: center;
     background: #37D892;
-    border-radius: 100px;
+    border-radius: 5px;
     padding: 15px 10px 15px 10px;
-    width: 150px;
+    width: 200px;
     justify-content: space-around;
+    border: 1px solid #37D892;
+    transition: all 0.3s ease-in-out;
 
-    @media screen and (max-width: 480px){    
-        width: 80%;
+    &:hover, :focus{
+        background-color: #37D89220;
+        border: 1px solid #37D892;
     }
 `;
 
 export const TitleContactCV = styled.a`
-    font-family: 'Inter';
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
@@ -143,17 +123,35 @@ export const TitleContactCV = styled.a`
 `;
 
 export const LinkTextCV = styled.a`
-    font-family: 'Inter';
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 10px;
-    color: #fff;
-    width: 70px;
+    color: ${props => props.theme.colors.text};
+    width: 100px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+`;
 
-    @media screen and (max-width: 480px){    
-        width: 150px;
+export const ContainerSocialMedias = styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    width: 200px;
+`;
+
+export const SocialMedia = styled.a`
+    display: flex;
+    height: 60px;
+    width: 60px;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid ${props => props.theme.colors.background};;
+    transition: all 0.3s ease-in-out;
+
+    &:hover, :focus{
+        background-color: #37D89220;
+        border: 1px solid #37D892;
     }
 `;

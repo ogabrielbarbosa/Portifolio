@@ -1,20 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from 'styled-components';
-import { Link } from 'react-router-dom';
 import ProjectsData from '../../projectsdata';
 
 import {
     ContainerProjects,
-    ContainerHorizontal,
     SubContainerProjects,
-    Divider,
     SubTitle,
-    SubTitleColor,
-    ContainerButtons,
-    ButtonArrows,
-    ButtonGit,
-    Carousel,
+    ButtonSeeMore,
+    TextSeeMore,
+    ContainerAllProjects,
     Project,
     BoxImage,
     Image,
@@ -22,133 +17,65 @@ import {
     TitleProject,
     Description,
     Tools,
-    AllProjects,
-    TextButton
 } from './styles';
 
 import Media from 'react-media';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { FiExternalLink } from "react-icons/fi";
 
-import { FiArrowRight, FiArrowLeft, FiExternalLink } from "react-icons/fi";
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
-import { Pagination, Navigation, Autoplay } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
 interface Props {
     toggleTheme(): void;
 }
 
 const Projects: React.FC<Props> = ({ toggleTheme }) => {
     const { colors, title } = useContext(ThemeContext);
-    const swiper = useSwiper();
+    AOS.init();
+    const [ controller, setController ] = useState(false);
 
+    function seeMore(){
+        setController(!controller);
+    }
+    let teste;
+
+    if(controller == true){
+        teste = Infinity;
+    }else{
+        teste = 3
+    }
+    
     return (
-        <ContainerProjects id="portifolio">
-            <ContainerHorizontal>
-                <SubContainerProjects>
-                    <Divider />
-                    <SubTitle>
-                        Meus projetos
-                        <SubTitleColor> pessoais</SubTitleColor>
-                    </SubTitle>
+        <ContainerProjects id="projetos">
+            <SubContainerProjects>
+                <SubTitle>
+                    Projetos pessoais
+                </SubTitle>
 
-                    <ContainerButtons>
-                        <ButtonArrows className='prev-custom-gabrielo'>
-                            <FiArrowLeft color='#37D892' size={25} />
-                        </ButtonArrows>
-                        <ButtonArrows className='next-custom-gabrielo'>
-                            <FiArrowRight color='#37D892' size={25} />
-                        </ButtonArrows>
-                    </ContainerButtons>
-                </SubContainerProjects>
+                <ButtonSeeMore onClick={seeMore}>
+                    <TextSeeMore>{controller ? "Ver menos" : "Ver mais"}</TextSeeMore>
+                </ButtonSeeMore>
+            </SubContainerProjects>
 
-                <Carousel>
-                    <Swiper
-                        slidesPerView={2}
-                        spaceBetween={30}
-                        loop={true}
-                        pagination={false}
-                        navigation={{
-                            nextEl: '.next-custom-gabrielo',
-                            prevEl: '.prev-custom-gabrielo'
-                        }}
-                        modules={[Pagination, Navigation, Autoplay]}
-                        autoplay={true}
-                        grabCursor={true}
-                        className="slides-2"
-                    >
+            <ContainerAllProjects>
+                {ProjectsData.slice(0, teste).map((item) => {
+                    const { id, img, title, description, tool, link } = item;
+                    return (
+                        <Project key={id} data-aos="zoom-in">
+                            <BoxImage>
+                                <Image src={img} />
+                            </BoxImage>
 
-                        {ProjectsData.map((item) => {
-                            const { id, img, title, description, tool, link } = item;
-                            return (
-                                <SwiperSlide key={id}>
-                                    <Project>
-                                        <BoxImage>
-                                            <Image src={img} />
-                                        </BoxImage>
+                            <ContainerTitle>
+                                <TitleProject>{title}</TitleProject>
+                                <a href={link}><FiExternalLink color={colors.text} size={25} /></a>
+                            </ContainerTitle>
 
-                                        <ContainerTitle>
-                                            <TitleProject>{title}</TitleProject>
-                                            <a href={link}><FiExternalLink color={colors.text} size={25} /></a>
-                                        </ContainerTitle>
-
-                                        <Description>{description}</Description>
-                                        <Tools>{tool}</Tools>
-                                    </Project>
-                                </SwiperSlide >
-                            )
-                        })}
-                    </Swiper>
-                    <Swiper
-                        slidesPerView={1}
-                        spaceBetween={30}
-                        loop={true}
-                        pagination={false}
-                        navigation={{
-                            nextEl: '.next-custom-gabrielo',
-                            prevEl: '.prev-custom-gabrielo'
-                        }}
-                        modules={[Pagination, Navigation, Autoplay]}
-                        autoplay={true}
-                        grabCursor={true}
-                        className="slides-1"
-                    >
-
-                        {ProjectsData.map((item) => {
-                            const { id, img, title, description, tool, link } = item;
-                            return (
-                                <SwiperSlide key={id}>
-                                    <Project>
-                                        <BoxImage>
-                                            <Image src={img} />
-                                        </BoxImage>
-
-                                        <ContainerTitle>
-                                            <TitleProject>{title}</TitleProject>
-                                            <a href={link}><FiExternalLink color={colors.text} size={25} /></a>
-                                        </ContainerTitle>
-
-                                        <Description>{description}</Description>
-                                        <Tools>{tool}</Tools>
-                                    </Project>
-                                </SwiperSlide >
-                            )
-                        })}
-                    </Swiper>
-                </Carousel>
-            </ContainerHorizontal>
-
-            <ContainerHorizontal>
-                <Link to='/projetos'>
-                    <AllProjects>
-                        <TextButton>
-                            Ver todos os projetos
-                        </TextButton>
-                    </AllProjects>
-                </Link>
-
-            </ContainerHorizontal>
-
+                            <Description>{description}</Description>
+                            <Tools>{tool}</Tools>
+                        </Project>
+                    )
+                })}
+            </ContainerAllProjects>
         </ContainerProjects>
     );
 }

@@ -13,6 +13,9 @@ declare module 'styled-components' {
             buttonText: string;
 
             shadow: string;
+
+            backgroundpresentation: string;
+            backgroundpresentation780: string;
         }
     }
 }

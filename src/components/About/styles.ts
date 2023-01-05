@@ -6,70 +6,47 @@ export const ContainerAbout = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    margin: 0 10% 10% 10%;
-    height: 50vh;
+    gap: 100px;
+    padding: 150px 0px;
 
-    @media screen and (max-width: 480px){
-        flex-direction: column-reverse;
-        height: 55vh;
+    @media screen and (max-width: 1320px){    
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 645px){    
+        gap: 20px;
     }
 `;
 
 export const Image = styled.img`
-    width: 40%;
-    
-    @media screen and (max-width: 480px){
-        width: 100%;
+    width: 500px;
+
+    @media screen and (max-width: 645px){    
+        width: 77vw;
     }
 `;
 
 export const SubContainerAbout = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
-    width: 50%;
-    height: 200px;
-
-    @media screen and (max-width: 480px){
-        width: 100%;
-    }
-
-`;
-
-export const Divider = styled.div`
-    height: 5px;
-    width: 300px;
-    background-color: #37D892;
-    background-image: linear-gradient(to right, #37D892 , #5825C7);
-
-    @media screen and (max-width: 480px){
-        width: 100%;
-    }
+    gap: 20px;
 `;
 
 export const SubTitle = styled.span`
-    font-family: 'Inter', sans-serif;
-    width: 30%;
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     color: ${props => props.theme.colors.text};
-    font-size: 25px;
+    font-size: 40px;
 
-    @media screen and (max-width: 480px){
-        width: 70%;
+    @media screen and (max-width: 468px){    
+        font-size: 35px;
     }
 `;
 
-export const SubTitleColor = styled.span`
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    color: #37D892;
-    font-size: 25px;
-`;
-
 export const Description = styled.span`
-    font-family: 'Inter';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 500;
     color: ${props => props.theme.colors.secundary};
@@ -93,38 +70,20 @@ export const ContactButton = styled.a`
     align-items: center;
     border-radius: 100px;
     width: fit-content;
+    transition: all 0.3s ease-in-out;
 
-    @media screen and (max-width: 480px){    
-        padding: 15px 25px;
+    &:hover, :focus{
+        background-color: #37D89220;
+        border: 1px solid #37D892;
     }
-`;
 
-export const AboutButton = styled.a`
-    display: flex;
-    border: 1px solid #37D892;
-    padding: 20px 40px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    width: fit-content;
-    
-    @media screen and (max-width: 480px){    
-        padding: 15px 25px;
+    &:hover span, :focus span{
+        color: #37D892;
     }
-`;
-
-export const TextButtonAbout = styled.span`
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    color: ${props => props.theme.colors.text};
-    text-align: center;
-    border-radius: 5px;
-    font-size: 17px;
 `;
 
 export const TextButton = styled.span`
-    font-family: 'Inter';
+    font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: 700;
     color: #fff;
