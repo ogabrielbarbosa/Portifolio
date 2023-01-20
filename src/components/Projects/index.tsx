@@ -14,6 +14,7 @@ import {
     BoxImage,
     Image,
     ContainerTitle,
+    SubContainerTitle,
     TitleProject,
     Description,
     Tools,
@@ -23,6 +24,7 @@ import Media from 'react-media';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FiExternalLink } from "react-icons/fi";
+import { AiFillGithub } from "react-icons/ai";
 
 interface Props {
     toggleTheme(): void;
@@ -31,19 +33,19 @@ interface Props {
 const Projects: React.FC<Props> = ({ toggleTheme }) => {
     const { colors, title } = useContext(ThemeContext);
     AOS.init();
-    const [ controller, setController ] = useState(false);
+    const [controller, setController] = useState(false);
 
-    function seeMore(){
+    function seeMore() {
         setController(!controller);
     }
     let teste;
 
-    if(controller == true){
+    if (controller == true) {
         teste = Infinity;
-    }else{
+    } else {
         teste = 3
     }
-    
+
     return (
         <ContainerProjects id="projetos">
             <SubContainerProjects>
@@ -58,7 +60,7 @@ const Projects: React.FC<Props> = ({ toggleTheme }) => {
 
             <ContainerAllProjects>
                 {ProjectsData.slice(0, teste).map((item) => {
-                    const { id, img, title, description, tool, link } = item;
+                    const { id, img, title, description, tool, link, github } = item;
                     return (
                         <Project key={id} data-aos="zoom-in">
                             <BoxImage>
@@ -67,7 +69,10 @@ const Projects: React.FC<Props> = ({ toggleTheme }) => {
 
                             <ContainerTitle>
                                 <TitleProject>{title}</TitleProject>
-                                <a href={link}><FiExternalLink color={colors.text} size={25} /></a>
+                                <SubContainerTitle>
+                                    <a target="blank" href={github}><AiFillGithub color={colors.text} size={25} /></a>
+                                    <a target="blank" href={link}><FiExternalLink color={colors.text} size={25} /></a>
+                                </SubContainerTitle>
                             </ContainerTitle>
 
                             <Description>{description}</Description>

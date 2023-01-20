@@ -155,3 +155,37 @@ export const SocialMedia = styled.a`
         border: 1px solid #37D892;
     }
 `;
+
+export const Imagem = styled.img`
+    position: absolute;
+    right: 0;
+    left: 60%;
+    height: 20vw;
+    
+    @media screen and (max-width: 980px){  
+        display: none;
+    }
+
+    animation: float 10s ease-in-out infinite;
+
+    @keyframes float {
+        0%{
+            transform: translateY(0);
+        }
+        20%{
+            transform: translateY(-25px);
+        }
+        40%{
+            transform: translateX(-25px);
+        }
+        60%{
+            transform: translateY(-25px);
+        }
+        80%{
+            transform: translateX(-25px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+`;

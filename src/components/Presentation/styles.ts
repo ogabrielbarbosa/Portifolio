@@ -82,7 +82,7 @@ export const TextNavs = styled.a`
     }
 `;
 
-export const Svg = styled.svg`
+export const Imagem = styled.img`
     position: absolute;
     right: 0;
     left: 60%;
@@ -90,5 +90,28 @@ export const Svg = styled.svg`
     
     @media screen and (max-width: 980px){  
         display: none;
+    }
+
+    animation: float 10s ease-in-out infinite;
+
+    @keyframes float {
+        0%{
+            transform: translateY(0);
+        }
+        20%{
+            transform: translateY(-25px);
+        }
+        40%{
+            transform: translateX(-25px);
+        }
+        60%{
+            transform: translateY(-25px);
+        }
+        80%{
+            transform: translateX(-25px);
+        }
+        100%{
+            transform: translateY(0);
+        }
     }
 `;

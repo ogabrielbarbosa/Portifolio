@@ -93,6 +93,12 @@ export const ContainerTitle = styled.div`
     padding: 30px;
 `;
 
+export const SubContainerTitle = styled.div`
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+`;
+
 export const TitleProject = styled.span`
     font-family: 'Poppins', sans-serif;
     font-style: normal;
@@ -108,6 +114,10 @@ export const Description = styled.span`
     color: ${props => props.theme.colors.secundary};
     margin: 0 30px;
     text-align: justify;
+    height: 175px;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-spacing: -0.05em;
 `;
 
 export const Tools = styled.span`

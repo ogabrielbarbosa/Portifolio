@@ -51,8 +51,10 @@ export const Description = styled.span`
     font-weight: 500;
     color: ${props => props.theme.colors.secundary};
     font-size: 15px;
-    text-align: justify; 
-    line-break: anywhere;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    word-spacing: -0.05em;
 `;
 
 export const ContainerButtons = styled.div`
