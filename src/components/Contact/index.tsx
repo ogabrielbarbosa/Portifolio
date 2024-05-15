@@ -27,13 +27,13 @@ const Contact: React.FC<Props> = ({ toggleTheme }) => {
 
             <SubContainerContact>
 
-                <BoxContact href='mailto:contato@gabarbosa.com' >
+                <BoxContact href='mailto:contato@gmail.com' >
                     <Icon width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15 0C6.71625 0 0 6.71625 0 15C0 23.2837 6.71625 30 15 30C23.2837 30 30 23.2837 30 15C30 6.71625 23.2837 0 15 0V0ZM23.7375 8.725L15 15.8075L6.26125 8.725H23.7375ZM23.75 21.225H6.25V10.5937L15 17.685L23.75 10.595V21.225Z" fill={colors.text} />
                     </Icon>
 
                     <BoxTexts>
-                        <LinkText>contato@gabarbosa.com</LinkText>
+                        <LinkText>Seu email de contato</LinkText>
                     </BoxTexts>
                 </BoxContact>
 
@@ -43,7 +43,7 @@ const Contact: React.FC<Props> = ({ toggleTheme }) => {
                     </Icon>
 
                     <BoxTexts>
-                        <LinkText>+5512996859020</LinkText>
+                        <LinkText>Seu telefone</LinkText>
                     </BoxTexts>
                 </BoxContact>
 
